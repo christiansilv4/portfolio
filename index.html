@@ -14,15 +14,15 @@
        TOKENS
        ========================================================= */
     :root {
-      --bg: #0A0A0B;
-      --bg-1: #111113;
-      --bg-2: #18181B;
-      --line: #232327;
-      --line-2: #2A2A2E;
-      --fg: #F5F5F7;
-      --fg-2: #A1A1A6;
-      --fg-3: #6B6B70;
-      --accent: #E5E5E7;
+      --bg: #F9F9F7;
+      --bg-1: #F2F2EF;
+      --bg-2: #EAEAE6;
+      --line: #E0E0DA;
+      --line-2: #D0D0C8;
+      --fg: #111110;
+      --fg-2: #5C5C58;
+      --fg-3: #9C9C96;
+      --accent: #111110;
       --maxw: 1200px;
       --gutter: 32px;
       --radius: 14px;
@@ -91,11 +91,11 @@
     }
     .hero-eyebrow {
       font-family: 'Geist Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 0.06em;
+      font-size: 13px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--fg-3);
-      margin-bottom: 40px;
+      color: var(--fg-2);
+      margin-bottom: 28px;
       display: flex; align-items: center; gap: 12px;
     }
     .hero-eyebrow .pulse {
@@ -117,7 +117,7 @@
       font-weight: 500;
       line-height: 1.05;
       letter-spacing: -0.035em;
-      margin-bottom: 32px;
+      margin-bottom: 48px;
       text-wrap: balance;
     }
     .hero h1 .dim { color: var(--fg-3); }
@@ -175,6 +175,15 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       padding-bottom: 80px;
+    }
+    .case-card.featured {
+      grid-column: 1 / -1;
+    }
+    .case-card.featured .case-card-cover {
+      aspect-ratio: 21 / 9;
+    }
+    .case-card.featured h3 {
+      font-size: clamp(22px, 2.2vw, 28px);
     }
     .case-card {
       background: var(--bg-1);
@@ -574,7 +583,7 @@
 
     .detail-cover.no-pattern::before { display: none; }
     .detail-gallery .ph.no-pattern::before { display: none; }
-    .detail-cover.no-pattern { background: #0A0A0B; }
+    .detail-cover.no-pattern { background: var(--bg); }
 
     /* VIDEO EMBED */
     .detail-video {
@@ -686,18 +695,25 @@
           <a href="#work">Work</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
+          <a href="https://drive.google.com/file/d/1bkfsIQt6u5pOmNyh_zCL2nlIh3taY12F/view?usp=sharing" target="_blank" rel="noopener">Resume ↗</a>
         </div>
       </div>
     </nav>
 
     <header class="shell hero" id="top">
 
+      <p class="hero-eyebrow reveal" style="--delay: 0ms">
+        <span class="pulse"></span>
+        Christian Silva
+      </p>
       <h1 class="reveal" style="--delay: 80ms">
-        Senior Product Designer.<br />
-        <span class="dim">End-to-end, AI-native, business-driven.</span>
+        Senior Product Designer.
       </h1>
       <p class="lede reveal" style="--delay: 160ms">
-        I've spent 20 years helping companies navigate complexity and ship products built around people. End-to-end, across Fintech, SaaS, Streaming, and AgriTech. Now I design AI-native products — where AI isn't bolted on, it's baked in. That shift changed everything about how I work.
+        Based in Guadalajara. I navigate complexity to ship products that work — across fintech, B2B marketplaces, SaaS, and voice. I use AI to go further than a solo designer could alone.
+      </p>
+      <p class="lede reveal" style="--delay: 220ms; font-size: clamp(15px, 1.3vw, 17px); margin-top: 16px;">
+        When I'm not designing, I'm shooting film or playing son jarocho.
       </p>
 
     </header>
@@ -719,11 +735,11 @@
       </div>
       <div class="about-grid">
         <p class="about-statement reveal">
-          I'm I turn hard problems into products that move businesses forward. I work end-to-end, I thrive in ambiguity, and I know how to bring teams with me. <em>If you're ready to build something meaningful — I'm the designer for that.</em>
+          I turn hard problems into products that move businesses forward. I work end-to-end, I thrive in ambiguity, and I know how to bring teams with me. <em>If you're ready to build something meaningful — I'm the designer for that.</em>
         </p>
         <div class="about-detail reveal" style="--delay: 100ms">
-          <p>Since 2023 my workflow has fundamentally changed: AI sits inside research, ideation, prototyping and even handoff. I design AI-powered products from the inside — knowing where models help, where they hurt, and how interaction patterns shift when the system can reason.</p>
-          <p>I work solo, embedded with one or two teams at a time, from discovery through engineering handoff.</p>
+          <p><strong>20+ years</strong> designing products across fintech, B2B marketplaces, SaaS, and voice. Since 2023 my workflow has fundamentally changed: AI sits inside research, ideation, prototyping and even handoff. I design AI-powered products from the inside — knowing where models help, where they hurt, and how interaction patterns shift when the system can reason.</p>
+          <p>I work solo, embedded with one or two teams at a time, from discovery through engineering handoff. I work in 6-week cycles — enough time to go deep, short enough to stay honest about scope.</p>
           <div class="about-tags">
             <span class="about-tag">UX Research</span>
             <span class="about-tag">Interaction Design</span>
@@ -738,11 +754,15 @@
 
     <section class="shell contact" id="contact">
       <h2 class="reveal">
-        Let's talk —<br />
-        <span class="dim">about AI, design, or working together.</span>
+        Available for new projects —<br />
+        <span class="dim">let's build something worth shipping.</span>
       </h2>
       <a class="contact-cta reveal" style="--delay: 100ms" href="https://www.linkedin.com/in/christiansilvaluna/" target="_blank" rel="noopener">
         Message on LinkedIn
+        <span class="arrow">↗</span>
+      </a>
+      <a class="contact-cta reveal" style="--delay: 160ms; background: var(--bg-1); color: var(--fg-2);" href="https://drive.google.com/file/d/1bkfsIQt6u5pOmNyh_zCL2nlIh3taY12F/view?usp=sharing" target="_blank" rel="noopener">
+        Download Resume
         <span class="arrow">↗</span>
       </a>
     </section>
@@ -794,14 +814,21 @@
     const CASE_STUDIES = [
       {
         id: 'jamie',
+        labels: {
+          overview:  '01 · The context nobody designs for',
+          problem:   '02 · Where the existing app broke',
+          process:   '03 · How I found what actually worked',
+          solution:  '04 · The interface that disappears',
+          learnings: '05 · What silence taught me'
+        },
         title: 'Cooking Mode: an interface designed for when your hands are covered in flour.',
         client: 'Jamie Oliver',
         year: '2026',
         platform: 'iOS · Android',
         industry: 'Food Tech',
-        summary: 'A voice-first cooking companion. Hands-busy, eyes-busy context — designed to fade into the background and speak up only when needed.',
+        summary: 'A voice-first cooking companion. Hands-busy, eyes-busy context — designed to fade into the background and speak up only when needed. Currently in friends & family testing.',
         tags: ['Voice UI', 'Mobile', 'AI', 'Ambient interaction'],
-        overview: '<p>Jamie Oliver wanted a companion app that could follow you through a recipe — step by step, hands free. Not a recipe viewer. A cooking partner.</p><p>I used AI throughout: Claude Code + Figma MCP for handoff, and AI-assisted prototyping that compressed 3-day iteration cycles to 1. I led the end-to-end design: concept definition, user flows, final design, and developer handoff using Figma MCP — a workflow that let me deliver specs directly into the codebase without losing fidelity.</p>',
+        overview: '<p>Jamie Oliver wanted a companion app that could follow you through a recipe — step by step, hands free. Not a recipe viewer. A cooking partner.</p><p><strong>Duration:</strong> Oct 2025 – present · 10+ iteration rounds · <strong>Team:</strong> 1 engineer, 1 PM, 2 stakeholders · <strong>My role:</strong> end-to-end design — concept definition, user flows, prototyping, and developer handoff via Figma MCP.</p><p><strong>Current status:</strong> Friends & family testing phase.</p><p>I used AI throughout: Claude Code + Figma MCP for handoff, and AI-assisted prototyping that compressed 3-day iteration cycles to 1.</p>',
         problem: '<h2 class="section-headline">Cooking is the worst context for a phone.</h2><p>Cooking is the worst context for a phone. Hands are wet. Eyes are on the pan. Attention is split between four things happening at once.</p><p>The existing app was built for browsing. It was beautiful — and completely wrong for the moment it was supposed to serve. People were setting their phones down mid-recipe and losing their place. The problem wasn\'t finding recipes. It was finishing them.</p>',
         process: '<h2 class="section-headline">Fast and non-linear — because there was no time to be thorough.</h2><p>My process was fast and non-linear. I explored multiple directions at once — not to be thorough, but because I needed to find what actually worked quickly.</p><p>Early iterations treated the app like a structured cooking guide: step-by-step screens, clear navigation, explicit controls. The UI was clean and organized. But when I put it in the context of actually cooking — hands wet, pan on the stove, attention split across four things — it fell apart.</p><p>The real engine was iteration through stakeholder feedback. I\'d present a flow, get a reaction, and use that to sharpen the next version. Each round eliminated a direction and sharpened the one worth pursuing. That cycle — show, get feedback, iterate — is where all the real decisions got made.</p><p>Two principles shaped every decision. First: <strong>affordances matter more than labels.</strong> In a hands-free, voice-first context, the interface can\'t rely on instructions — the right action has to feel obvious without explanation. Second: <strong>fast conceptualization is the only way to validate.</strong> Designing for eyes-busy, hands-busy situations requires testing ideas quickly and discarding what doesn\'t hold up in the real context of cooking.</p><p>That combination — rapid iteration and implicit affordances — is what made it possible to converge on an experience that actually works without looking at the screen.</p>',
         solution: '<h2 class="section-headline">Almost no buttons. Because buttons require you to look.</h2><p>Cooking Mode became a single-purpose surface. Large step text. A passive listening indicator. A timer. Almost no buttons — because buttons require you to look.</p><p>The entire interface was built on one assumption: the user is not looking at the screen. Every interaction had to work by voice, by glance, or not at all.</p><p>Voice responses are short and contextual. "Next step." "Two more minutes." "What was that again?" Jamie\'s tone — warm and direct — not robotic confirmations.</p><p><strong>The hardest design decision:</strong> knowing when to stay silent. The temptation is to make the AI helpful at every moment. The real skill was deciding when it should do nothing.</p>',
@@ -809,6 +836,13 @@
       },
       {
         id: 'agriway',
+        labels: {
+          overview:  '01 · The problem with one price',
+          problem:   '02 · Three tensions, one system',
+          process:   '03 · Making complexity invisible',
+          solution:  '04 · The final model',
+          learnings: '05 · What B2B complexity actually requires'
+        },
         title: 'The freight cost was the same for every buyer. That stopped making sense at scale.',
         client: 'Agriway',
         year: '2026',
@@ -816,7 +850,7 @@
         industry: 'AgriTech',
         summary: 'How I designed a dynamic logistics pricing feature for a B2B agricultural auction platform — letting buyers see their real freight cost at the moment of bidding.',
         tags: ['AgriTech', 'B2B', 'AI', 'Governance'],
-        overview: '<p>Agriway is a B2B platform that connects buyers and sellers of agricultural commodities — animal protein, grains, and raw materials — through auctions and an opportunity marketplace.</p><p>AI was central to the process — not as a product feature, but as a validation tool. The complexity of dynamic logistics rules meant that traditional design reviews weren\'t enough. I used AI to stress-test flows with stakeholders, simulate edge cases in real time, and accelerate alignment on a product where business rules directly determine design outcomes. In a marketplace like Agriway, where credibility is everything, getting the logic right before dev was non-negotiable.In Stage 2, the product needed to evolve from a static logistics model — where the organizer set a single fixed freight cost for all buyers — to a dynamic system that could calculate freight automatically based on each buyer\'s destination.</p><p>My role: end-to-end design from discovery through handoff. Flows, UI, and implementation via Figma Make.</p>',
+        overview: '<p>Agriway is a B2B platform that connects buyers and sellers of agricultural commodities — animal protein, grains, and raw materials — through auctions and an opportunity marketplace.</p><p><strong>Duration:</strong> 1 month · <strong>Team:</strong> 2 engineers, 1 PM, 1 project manager, 6 stakeholders · <strong>My role:</strong> end-to-end design from discovery through handoff — flows, UI, and implementation via Figma Make.</p><p>AI was central to the process — not as a product feature, but as a validation tool. The complexity of dynamic logistics rules meant that traditional design reviews weren\'t enough. I used AI to stress-test flows with stakeholders, simulate edge cases in real time, and accelerate alignment on a product where business rules directly determine design outcomes.</p><p>In Stage 2, the product needed to evolve from a static logistics model — where the organizer set a single fixed freight cost for all buyers — to a dynamic system that could calculate freight automatically based on each buyer\'s destination.</p>',
         problem: '<h2 class="section-headline">One freight cost. Buyers spread across an entire country.</h2><p>In national protein sales, a single freight cost doesn\'t reflect commercial reality. A buyer in Monterrey doesn\'t pay the same as one in Guadalajara. The static model was creating friction in negotiations and reducing the competitiveness of offers.</p><p>The design challenge was making the system flexible enough to coexist with the existing static model — without breaking current flows — and simple enough for an organizer with thousands of clients to configure without friction.</p><p>Three tensions defined the design. First: the organizer needs control over which locations are exposed to buyers, but the system also needs to calculate freight automatically toward destinations buyers indicate freely. Both cases had to live in the same lot configuration. Second: the competitive price in this market is always the origin price — freight is informational and must never affect the offer ranking. Third: the rate catalog already exists in the organizer\'s enterprise systems. Agriway consumes it, doesn\'t duplicate it. The design had to respect that architecture without exposing it to the buyer.</p>',
         process: '<h2 class="section-headline">The real pressure wasn\'t UX — it was scale.</h2><p>Agriway\'s anchor client — a major protein company operating nationally — was running auctions with buyers distributed across the country. A single fixed freight cost made the platform less useful for exactly the transactions that mattered most: high-volume, multi-buyer events where the difference between winning and losing a bid could come down to logistics.</p><p>Solving this wasn\'t just a UX problem. It required understanding how the client\'s existing logistics rate catalog worked, why the competitive ranking had to stay anchored to origin price, and what would break in the governance model if freight calculation could block an offer. Those constraints weren\'t obstacles — they were the design brief.</p><p>The central question I kept coming back to: how do you surface financially meaningful information without making buyers think it changes the rules of the auction? That tension — useful context vs. misleading signal — shaped every decision in the modal, the summary display, and the \'not available\' state.</p><p>Because the business rules were this complex, traditional design reviews weren\'t enough. Static screens couldn\'t convey how the pricing logic behaved across different scenarios. I used Figma Make to build interactive prototypes with real dynamic pricing context — stakeholders could select a destination, see the freight calculate, and watch the summary update in real time. That level of fidelity was the only way to get meaningful sign-off on flows this complex.</p>',
         solution: '<h2 class="section-headline">Two modes. One decision that changes everything.</h2><p>The lot configuration flow was split into two mutually exclusive modes: Static and Dynamic. In Static mode, nothing changes. In Dynamic mode, the organizer selects which catalog locations can serve the lot and decides — per location — whether to expose it as a visible delivery option for the buyer, or use it only for internal freight calculation.</p><p>That distinction — visible delivery option vs. internal-only — was the most important design decision in the feature. It gives the organizer granular control without exposing their full logistics network to the market.</p><p>For the buyer, the offer modal replaces the Incoterm selector with a destination selector in two sections: options enabled by the organizer with their fixed cost, and a free-text field for the buyer\'s own location. When the buyer indicates their destination, the system queries the rate catalog and calculates the average across all lot origins. If no rate is found, the offer is still valid — freight shows as "Not available" but never blocks or penalizes the bid.</p><p>The cost summary — origin price, estimated freight, estimated total — updates in real time as the buyer selects their destination. The note "Freight cost is an informational estimate" is always present to anchor the right expectation.</p>',
@@ -824,29 +858,43 @@
       },
       {
         id: 'pact',
+        labels: {
+          overview:  '01 · The chaos nobody built for',
+          problem:   '02 · Why simple wasn\'t enough',
+          process:   '03 · The question that reframed everything',
+          solution:  '04 · Trust as a design decision',
+          learnings: '05 · From useful to believable'
+        },
         title: 'When project managers spend more time collecting updates than making decisions.',
         client: 'Pact',
         year: '2025',
         platform: 'Web · Desktop',
         industry: 'SaaS',
-        summary: 'Pact connects daily tasks to company goals. It pulls from Jira, Slack, documents, and meetings — and makes everything easier to track.',
+        summary: 'Pact connects daily tasks to company goals. It pulls from Jira, Slack, documents, and meetings — and makes everything easier to track. Helped close 1 customer deal and engage 5 high-potential prospects.',
         tags: ['SaaS', 'AI-native', 'Web', 'Workflow'],
         overview: '<p>Pact is a SaaS tool that connects daily tasks to company goals — pulling signal from Jira, Slack, documents, and meetings into one place.</p><p><strong>Duration:</strong> 2 months · <strong>Team:</strong> 3 engineers, 1 co-founder · My role: research, concept validation, prototyping, workshop facilitation, final design.</p><p><strong>Result:</strong> Pact closed 1 customer deal and engaged 5 high-potential prospect companies with this solution.</p>',
         problem: '<h2 class="section-headline">The information was always there. Nobody had time to connect it.</h2><p>Chaos is real. Project managers were spending most of their day collecting updates — chasing status in Slack, sitting in meetings that existed only to share information, piecing together what was actually happening.</p><p>By the time they had a clear picture, something had already gone wrong. The information existed. It was just scattered across six tools and three conversations that happened yesterday.</p><p>The business needed a product that could close deals. The design challenge was making AI genuinely useful — not just present — in a workflow that was already overwhelming.</p>',
         process: '<h2 class="section-headline">Technically correct. Practically unusable.</h2><p>Early concepts had too many levels and too many elements. I kept building things that were technically correct and practically unusable. The first real feedback session made that clear fast.</p><p>I explored multiple directions in parallel — outcome tracking, AI feeds, contextual summaries — and brought them to stakeholders as rough flows, not polished screens. Each round of feedback killed something and sharpened something else. That cycle is where the real product decisions got made.</p><p>The moment that changed everything came from users: <em>"How trustable is the AI?"</em> Nobody was asking about features. They were asking whether they could believe what the tool was telling them. That question reframed the entire design direction.</p>',
         solution: '<h2 class="section-headline">Not a feature. A principle.</h2><p>Three components shaped the solution:</p><p><strong>Outcome-based tracking.</strong> Every task links to a commercial outcome. Engineers see why their work matters. Managers see what\'s moving the needle.</p><p><strong>Contextual information.</strong> Pact scans Jira, Slack, emails, and meetings and surfaces what\'s relevant — without anyone having to search for it.</p><p><strong>Feed.</strong> A weekly AI-compiled summary of what matters. Managers stay informed without attending every meeting.</p><p><strong>The decision that defined the product.</strong> The most important thing I designed wasn\'t a feature — it was a principle. Every AI suggestion had to show its evidence: the document it referenced, the meeting it came from, the Slack thread that triggered it. It made the UI more complex. But without it, users didn\'t trust the product enough to use it. Trustability wasn\'t a nice-to-have. It was the product.</p>',
-        learnings: '<h2 class="section-headline">From &#8216;Is this useful?&#8217; to &#8216;Can I trust this?&#8217;</h2><p>I facilitated a co-creation workshop to define Pact\'s <strong>AI principles</strong> — how the AI should behave, what it should show, and when to stay out of the way. That became the foundation for everything that followed.</p><p>We aligned with engineering on <strong>atomic design</strong> early. Consistency across the product without doubling the work.</p><p><strong>Result:</strong> Pact closed 1 customer deal and engaged 5 high-potential prospect companies with this solution.</p>'
+        learnings: '<h2 class="section-headline">From &#8216;Is this useful?&#8217; to &#8216;Can I trust this?&#8217;</h2><p>I facilitated a co-creation workshop to define Pact\'s <strong>AI principles</strong> — how the AI should behave, what it should show, and when to stay out of the way. That became the foundation for everything that followed.</p><p>We aligned with engineering on <strong>atomic design</strong> early. Consistency across the product without doubling the work.</p>'
       },
       {
         id: 'kueski',
+        labels: {
+          overview:  '01 · When payday is too far away',
+          problem:   '02 · We assumed wrong',
+          process:   '03 · What real users actually needed',
+          solution:  '04 · More information, more trust',
+          learnings: '05 · Outcomes over features'
+        },
         title: 'The money was already earned. Payday was just too far away.',
         client: 'Kueski Up',
         year: '2022',
         platform: 'Mobile · iOS, Android',
         industry: 'Fintech',
-        summary: 'A fintech product that lets workers access earned wages before payday. Designed for trust, clarity, and financial flexibility for employees in Mexico.',
+        summary: 'A fintech product that lets workers access earned wages before payday. Designed for trust, clarity, and financial flexibility for employees in Mexico. Redesign reduced customer support interactions by ~20%.',
         tags: ['Fintech', 'Mobile', 'B2C', 'Latin America'],
-        overview: '<p><strong>Duration:</strong> 3 months. <strong>Team:</strong> 4 engineers, 1 PM, 1 designer.</p><p><em>Note: This case is from 2022 — before AI tools were part of my workflow. It\'s included because the core challenge — designing for trust in a high-stakes financial context — remains relevant regardless of tooling.</em></p><p>My role: lead designer. I drove the full design process and launched native apps for iOS and Android — research, validation, prototyping, workshop facilitation, and handoff.</p><p>Kueski is a Mexican fintech that, in 2020, prioritized developing new financial products to drive long-term growth. Kueski Up gives employees access to their earned wages before payday — integrated directly into company benefit packages.</p>',
+        overview: '<p><strong>Duration:</strong> 3 months · <strong>Team:</strong> 4 engineers, 1 PM, 1 designer · <strong>My role:</strong> lead designer — research, validation, prototyping, workshop facilitation, and handoff. Launched native apps for iOS and Android.</p><p><em>Note: This case is from 2022 — before AI tools were part of my workflow. It\'s included because the core challenge — designing for trust in a high-stakes financial context — remains relevant regardless of tooling.</em></p><p>Kueski is a Mexican fintech that, in 2020, prioritized developing new financial products to drive long-term growth. Kueski Up gives employees access to their earned wages before payday — integrated directly into company benefit packages.</p>',
         problem: '<h2 class="section-headline">Rigid pay cycles create real financial stress.</h2><p>Employees face real financial stress from rigid pay cycles. For companies with high turnover — cleaning services, restaurants, creative agencies — that stress directly affects retention.</p><p>The goal was to design a product that felt as trustworthy as a bank, as fast as a fintech, and clear enough to never confuse someone making a financial decision on their phone.</p><p><strong>Design goal:</strong> empower employees with secure, 24/7 access to their earned wages — quickly and effortlessly.</p>',
         process: '<h2 class="section-headline">We assumed big companies would care most. We were wrong.</h2><p>I created a pitch deck to validate the solution with companies before building anything. We initially assumed big companies would show greater interest. We were wrong — it was small businesses with high turnover that needed it most.</p><p>We launched a lightweight MVP to learn fast. The hypothesis: simple and minimal would win. Two steps, request funds, done.</p><p>Real users told us otherwise. Three problems surfaced immediately:</p><p>— Salary information was confusing. Users didn\'t know what they could actually request.<br />— Payroll deduction was unclear. Nobody understood how repayment worked.<br />— Data privacy felt unaddressed. Users hesitated before entering any personal information.</p><p>Simple wasn\'t enough. It had to be <em>transparent</em>.</p>',
         solution: '<h2 class="section-headline">The decision that changed everything was the home screen.</h2><p><strong>The decision that changed everything.</strong> The most important design decision I made was restructuring the home screen around information density instead of simplicity. Users needed to see base salary, daily accrual, payroll deduction, next payday, days worked, and available balance — all at once. Hiding that information made the product feel untrustworthy.</p><p>It made the screen more complex. But without that clarity, users didn\'t feel confident enough to request funds.</p><p>Three design principles guided every decision from that point:</p><p><strong>Transparency.</strong> Ensuring users understand exactly what they\'re seeing — no hidden fees, no confusing deductions.<br /><strong>Privacy.</strong> Maintaining confidentiality at every step.<br /><strong>Security.</strong> Safeguarding user information against fraud.</p><p>The request flow became three steps: all the information upfront, enter an amount with real-time available balance visible, confirm with fees and payroll deduction spelled out. No surprises.</p>',
@@ -854,6 +902,13 @@
       },
       {
         id: 'dom',
+        labels: {
+          overview:  '01 · A saturated market, a clear gap',
+          problem:   '02 · The brief before the brief',
+          process:   '03 · 13 directions to find one',
+          solution:  '04 · Bold as a system',
+          learnings: '05 · Why more exploration means more conviction'
+        },
         title: 'Building a brand for a studio that builds AI-native products — without looking like everyone else.',
         client: 'Neuforce',
         year: '2025',
@@ -869,6 +924,14 @@
       },
       {
         id: 'empleodigno',
+        labels: {
+          overview:  '01 · A mission that needed a face',
+          problem:   '02 · The white space nobody owned',
+          process:   '03 · The sprint that became the brief',
+          feedback:  '04 · Getting honest feedback on brand',
+          solution:  '05 · Where the identity landed',
+          learnings: '06 · Shared ownership before the first pixel'
+        },
         title: 'A brand needs to know what it stands for before it can look like anything.',
         client: 'Empleo Digno',
         year: '2025',
@@ -876,7 +939,7 @@
         industry: 'Social Impact',
         summary: 'Brand identity and logo design for a Mexican employment platform. I led a Three-Hour Brand Sprint with key stakeholders — the workshop output became the foundation for the entire visual identity.',
         tags: ['Branding', 'Identity', 'Workshop', 'Social Impact'],
-        overview: '<p>Empleo Digno is a Mexican platform that connects job seekers with companies — using AI to identify skills gaps and help people develop the competencies they need to find better work. The mission is social: every person deserves a dignified employment process and a real opportunity to grow.</p><p>I was brought in as the designer responsible for the visual identity and to facilitate the brand strategy workshop that would ground the entire design direction. My role: lead the Three-Hour Brand Sprint with key stakeholders, synthesize the output into a clear brand foundation, and design the logotype and visual identity system.</p>',
+        overview: '<p>Empleo Digno is a Mexican platform that connects job seekers with companies — using AI to identify skills gaps and help people develop the competencies they need to find better work. The mission is social: every person deserves a dignified employment process and a real opportunity to grow.</p><p><strong>Duration:</strong> 3 weeks · <strong>Team:</strong> 8 stakeholders, 1 PM, 1 product marketing · <strong>My role:</strong> lead the Three-Hour Brand Sprint with key stakeholders, synthesize the output into a clear brand foundation, and design the logotype and visual identity system.</p>',
         problem: '<h2 class="section-headline">A different proposition in a market with established players.</h2><p>Empleo Digno was entering a market with established players — OCC, Indeed, LinkedIn — but with a fundamentally different proposition. It wasn\'t just a job board. It was a platform with a social mission, an educational layer, and a long-term vision of becoming the Bloomberg of the protein industry for human capital.</p><p>The brand needed to communicate that difference without sounding like a nonprofit or a government program. It needed to feel modern, warm, and disruptive at the same time — close enough to speak to a 22-year-old looking for their first job, credible enough for a corporate HR director.</p><p>The competitive mapping made the opportunity clear: most players in Mexico occupied the Classic/Reserved quadrant. The white space was Modern/Expressive — and that\'s exactly where Empleo Digno needed to live.</p>',
         process: '<h2 class="section-headline">The sprint wasn\'t an alignment exercise — it was the design brief.</h2><p>The Three-Hour Brand Sprint I facilitated wasn\'t just an alignment exercise — it was the design brief. By bringing together the founders and key stakeholders in a structured session, I was able to extract what no amount of desk research would have surfaced: what the people building this company actually believed.</p><p>The workshop produced five brand personality pillars that became non-negotiable for the identity:</p><p><strong>Accessible and friendly</strong> — clearly centered on inclusion, connecting with people.<br /><strong>Startup</strong> — combining agility and freshness with structure and strategy.<br /><strong>Young and innovative</strong> — current, proposing new ideas, continuously improving.<br /><strong>Rebellious</strong> — questioning the established when it means creating something more just.<br /><strong>With purpose</strong> — every action aligned with the mission of generating real opportunities.</p><p>That combination — warm and disruptive, structured and rebellious — was the brief. Every visual decision that followed was tested against those five pillars, not against aesthetic preference.</p><p>The competitive mapping made the white space clear: most players in Mexico occupied the Classic/Reserved quadrant. The opportunity was Modern/Expressive — and that\'s exactly where Empleo Digno needed to live.</p>',
         feedback: '<p>Getting useful feedback on brand concepts is hard — people default to personal preference instead of evaluating against the brief.</p><p>I designed an async voting process: a structured set of questions that forced each stakeholder to evaluate every direction against the pillars the team had already defined. Not <em>"do you like it?"</em> — but <em>"does this express what we said we stood for?"</em></p><p>The initial directions were rejected through that process. Not because they were bad — but because they didn\'t survive contact with the brand\'s own criteria. Once those paths were eliminated, the brief got sharper. The second round had clearer boundaries — and that\'s what led to the identity that actually worked.</p>',
@@ -908,6 +971,8 @@
           <span>${cs.client}</span>
           <span>·</span>
           <span>${cs.year}</span>
+          <span>·</span>
+          <span>Lead Designer</span>
         </div>
         <h3>${cs.title}</h3>
         <p>${cs.summary}</p>
@@ -991,17 +1056,17 @@
           </div>
 
           <div class="detail-section">
-            <div class="label">01 · Overview</div>
+            <div class="label">${cs.labels.overview}</div>
             <div class="body">${cs.overview}</div>
           </div>
 
           <div class="detail-section">
-            <div class="label">02 · Problem</div>
+            <div class="label">${cs.labels.problem}</div>
             <div class="body">${cs.problem}</div>
           </div>
 
           <div class="detail-section">
-            <div class="label">03 · Process</div>
+            <div class="label">${cs.labels.process}</div>
             <div class="body">${cs.process}</div>
           </div>
 
@@ -1010,19 +1075,19 @@
 
           ${cs.feedback ? `
           <div class="detail-section">
-            <div class="label">04 · Feedback</div>
+            <div class="label">${cs.labels.feedback}</div>
             <div class="body">${cs.feedback}</div>
           </div>` : ''}
 
           <div class="detail-section">
-            <div class="label">${cs.feedback ? '05' : '04'} · Solution</div>
+            <div class="label">${cs.labels.solution}</div>
             <div class="body">${cs.solution}</div>
           </div>
 
           <div class="detail-image-strip" id="detail-strip-solution"></div>
 
           <div class="detail-section">
-            <div class="label">${cs.feedback ? '06' : '05'} · Learnings</div>
+            <div class="label">${cs.labels.learnings}</div>
             <div class="body">${cs.learnings}</div>
           </div>
 
